@@ -23,7 +23,7 @@ Upload a file, copy its digest, and optionally paste an expected hash to instant
 ## How It Works
 
 1. The user selects a file and (optionally) enters an expected hash in the web form.
-2. Flask passes the file's binary stream to `compute_hashes()` in `tools/hash_tool.py`.
+2. Flask passes the file's binary stream to `compute_hashes()` inside `VariyaDhruvi_HashCheck.py`.
 3. The stream is read in **64 KB chunks**. All three hash objects (`md5`, `sha1`, `sha256`) are updated on every chunk in a single pass — the file is never fully loaded into memory.
 4. The digests are returned as lowercase hex strings and rendered on the results page.
 5. If an expected hash was provided, its length determines which algorithm to compare against, and a MATCH or MISMATCH banner is shown.
@@ -45,18 +45,11 @@ Upload a file, copy its digest, and optionally paste an expected hash to instant
 ## Project Structure
 
 ```
-SentinelDesk/
-├── app.py                  # Flask app, routes, config
-├── requirements.txt        # Python dependencies
-├── static/
-│   └── style.css           # Stylesheet
-├── templates/
-│   ├── base.html           # Shared page layout
-│   ├── hash_tool.html      # Hash checker UI (form + results)
-│   └── index.html          # Root placeholder (redirects to /hash)
-└── tools/
-    ├── __init__.py
-    └── hash_tool.py        # compute_hashes() — core hashing logic
+hashcheck-file-integrity/
+├── VariyaDhruvi_HashCheck.py   # Single-file app: logic, routes, HTML, CSS
+├── requirements.txt            # Python dependencies (flask only)
+└── docs/
+    └── screenshots/            # README screenshots
 ```
 
 ---
@@ -76,7 +69,7 @@ py -m pip install -r requirements.txt
 ## How to Run
 
 ```powershell
-py app.py
+python VariyaDhruvi_HashCheck.py
 ```
 
 The terminal will show:
