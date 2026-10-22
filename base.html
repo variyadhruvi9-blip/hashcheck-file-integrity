@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+  base.html — The shared layout for every page on HashCheck.
+
+  Every other template extends this file and fills in the named blocks.
+  Anything outside those blocks (navbar, footer, CSS link) appears on
+  every single page automatically.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Each page can override the tab title via the title block. -->
+  <title>{% block title %}HashCheck: File Integrity Verifier{% endblock %}</title>
+
+  <!-- Single CSS file for the whole site, served from static/ -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+
+  <!-- ── Navigation bar ─────────────────────────────────────────── -->
+  <nav class="navbar">
+    <a href="{{ url_for('hash_tool') }}" class="nav-brand">🔍 HashCheck</a>
+    <ul class="nav-links">
+      <li><a href="{{ url_for('hash_tool') }}">File Integrity Verifier</a></li>
+    </ul>
+  </nav>
+
+  <!-- ── Page content ───────────────────────────────────────────── -->
+  <!-- Child templates inject their HTML here -->
+  <main class="container">
+    {% block content %}{% endblock %}
+  </main>
+
+  <!-- ── Footer ─────────────────────────────────────────────────── -->
+  <footer class="footer">
+    <p>HashCheck: File Integrity Verifier</p>
+  </footer>
+
+</body>
+</html>
