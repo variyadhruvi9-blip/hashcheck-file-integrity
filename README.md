@@ -120,19 +120,19 @@ If it does not match, a red **MISMATCH** banner is shown.
 
 **Upload form**
 
-![Upload form](docs/screenshots/upload_form.png)
+![Upload form](docs/screenshots/upload_form.png.png)
 
 **Hash values**
 
-![Hash values](docs/screenshots/hash_values.png)
+![Hash values](docs/screenshots/hash_values.png.png)
 
 **Hash results with MATCH**
 
-![Results with MATCH](docs/screenshots/results_match.png)
+![Results with MATCH](docs/screenshots/results_match.png.png)
 
 **Hash results with MISMATCH**
 
-![Results with MISMATCH](docs/screenshots/results_mismatch.png)
+![Results with MISMATCH](docs/screenshots/results_mismatch.png.png)
 
 ---
 
