@@ -120,15 +120,15 @@ If it does not match, a red **MISMATCH** banner is shown.
 
 **Upload form**
 
-![Upload form placeholder](docs/screenshots/upload_form.png)
-
+[upload form](image.png)
+![hash values](image-1.png)
 **Hash results with MATCH**
 
-![Results MATCH placeholder](docs/screenshots/results_match.png)
+![Results with match](image-2.png)
 
 **Hash results with MISMATCH**
 
-![Results MISMATCH placeholder](docs/screenshots/results_mismatch.png)
+![Results with mismatch](image-3.png)
 
 ---
 
